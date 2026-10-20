@@ -851,7 +851,7 @@ kbd{font-family:'JetBrains Mono',monospace;font-size:.66rem;padding:2px 6px;bord
         <a href="assets/Vishal_Resume.pdf" download class="btn btn-gh magnetic">Download résumé</a>
       </div>
       <div class="hero-meta hero-in" style="animation-delay:1.3s">
-        <div class="hm"><b data-count="9">0</b><span>Projects built</span></div>
+        <div class="hm"><b data-count="10">0</b><span>Projects built</span></div>
         <div class="hm"><b data-count="9">0</b><span>Certifications</span></div>
         <div class="hm"><b>110K+</b><span>Rows analyzed</span></div>
       </div>
@@ -939,7 +939,7 @@ kbd{font-family:'JetBrains Mono',monospace;font-size:.66rem;padding:2px 6px;bord
       </figure>
 
       <div class="card stats rv" style="--d:.25s">
-        <div class="stat"><b><span data-count="9">0</span></b><span>Projects built</span></div>
+        <div class="stat"><b><span data-count="10">0</span></b><span>Projects built</span></div>
         <div class="stat"><b><span data-count="9">0</span></b><span>Certifications</span></div>
         <div class="stat"><b><span data-count="110">0</span><sup>K+</sup></b><span>Rows analyzed</span></div>
         <div class="stat"><b><span data-count="8.18" data-dec="2">0</span></b><span>BCA CGPA</span></div>
@@ -1173,6 +1173,13 @@ const FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
    If the file is missing, the card falls back to the emoji.
 ============================================================ */
 const PD={
+  nike:{cat:'powerbi',catLabel:'Power BI',isNew:true,img:'Images/projects/nike.png',emoji:'👟',bg:'linear-gradient(135deg,#fff7ed,#fed7aa)',
+    badge:'Power BI · DAX · Retail BI',title:'Nike Business Dashboard',
+    short:'Multi-page retail BI dashboard covering sales, products, customers, stores, campaigns, inventory and sustainability, with drill-through reports.',
+    desc:'An interactive, multi-page retail business intelligence dashboard inspired by Nike. It analyzes sales performance, product trends, customer behavior, regional and store sales, marketing campaigns, inventory and sustainability metrics. KPI cards, filters and drill-through reports turn transactional data into business insights, backed by DAX measures, Power Query transformations, data modeling and data-quality validation.',
+    features:['Sales performance tracking with KPIs, revenue trends and growth analysis','Product and category analysis to find top-performing products','Customer segmentation and purchasing behavior analysis','Regional and store-level sales performance comparisons','Marketing campaign effectiveness and inventory monitoring','Sustainability metrics and business performance reporting','Interactive filters, drill-through pages and detailed report views','Data-quality checks for consistent, reliable data'],
+    tags:['Power BI','DAX','Power Query','Python','Excel','Data Modeling','Data Visualization'],
+    github:'https://github.com/Vishal2930-Data-analyst/Nike-Business-Dashboard-PowerBI'},
   apple:{cat:'powerbi',catLabel:'Power BI',isNew:true,img:'Images/projects/apple.png',emoji:'🍎',bg:'linear-gradient(135deg,#f4f4f5,#d4d4d8)',
     badge:'Power BI · DAX · Data Modeling',title:'Apple Supply Chain & Logistics Analytics',
     short:'Multi-page Power BI dashboard covering suppliers, inventory, production, shipments and customers, with KPIs for revenue, profit and delays.',
@@ -1564,7 +1571,7 @@ let heroCanvas=null;
   const route=t=>{t=t.toLowerCase().trim();
     if(!t)return null;if(/^clear$/.test(t))return'clear';if(/help|\?$/.test(t)&&t.length<6)return'help';
     if(/hire|availab|job|contact|email|reach|open to/.test(t))return'hire';
-    if(/power ?bi|dashboard|apple|supply|logistic/.test(t))return'powerbi';if(/excel|spreadsheet/.test(t))return'excel';
+    if(/power ?bi|dashboard|apple|supply|logistic|nike|retail|sales/.test(t))return'powerbi';if(/excel|spreadsheet/.test(t))return'excel';
     if(/\bsql\b|database|library/.test(t)&&/project|show|build/.test(t))return'sql';
     if(/\bml\b|machine|model|predict|python|ai\b|yolo|vision|detect|opencv|pytorch|camera/.test(t))return'ml';
     if(/project|work|portfolio|built/.test(t))return'projects';
